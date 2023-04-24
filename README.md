@@ -1,4 +1,5 @@
-# Desafios da DevsFree
+![Banner do GitHub (1)](https://user-images.githubusercontent.com/108367675/234111039-204631f7-0d4d-45ea-bd71-c173dd557ed1.png)
+
 Esse repositório contém desafios para Desenvolvedores `Back-end`, `Front-end` (web / mobile) e tem como objetivo auxiliar os novos e já colaborados da DevsFree a demonstrarem suas capacitades técnicas e encaminhá-los aos projetos que melhor se encaixam em seu perfil. Os participantes poderão ser encaminhados para projetos mais simples ou mais avançados e até projetos remunerados, dependendo do resultado  durante os desafios e enquanto desenvolvem dentro da DevsFree.  
 ### Para participar, siga os procedimentos:
 - Vá na aba de Issues desse repositório;
