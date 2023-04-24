@@ -13,3 +13,5 @@ Esse repositório contém desafios para Desenvolvedores `Back-end`, `Front-end` 
 - Abra um pull-request contendo o desafio resolvido (cumprindo todas as exigências pedidas na Issue).
 
 _O seu pull-request será respondido após conferirmos e analisarmos com os de outros participantes. Não será permitido cópiar outros repositórios_
+
+[Repositório do Desafio](https://github.com/DevsFreeOrg/.github/issues)
