@@ -1,3 +1,4 @@
+import { Header } from '@/components/Header'
 import { ReactNode } from 'react'
 
 interface DefaultLayoutProps {
@@ -6,8 +7,8 @@ interface DefaultLayoutProps {
 
 export function DefaultLayout({ children }: DefaultLayoutProps) {
   return (
-    <div className="w-full max-w-4xl my-0 mx-auto">
-      <h1>header</h1>
+    <div className="w-full max-w-4xl mt-24 mx-auto">
+      <Header />
 
       {children}
     </div>
