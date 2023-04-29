@@ -7,7 +7,7 @@ interface DefaultLayoutProps {
 
 export function DefaultLayout({ children }: DefaultLayoutProps) {
   return (
-    <div className="w-full max-w-3xl mt-24 mx-auto">
+    <div className="w-full max-w-2xl mt-24 mx-auto">
       <Header />
 
       {children}
