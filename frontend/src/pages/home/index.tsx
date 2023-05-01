@@ -77,14 +77,10 @@ export default function Home() {
     setUserNotFound(false)
   }
 
-  const hasFoundUser = !!user
-  const hasRepos = repos.length > 0
+  const hasFoundUser = !!user && searchTerm
+  const hasRepos = repos.length > 0 && searchTerm
   const isEmpty = !isLoading && !searchTerm
   const isErrorOnScreen = hasError && !isLoading && searchTerm
-  const isSearchLoading =
-    isLoading || (searchTerm && !hasError && !userNotFound)
-
-  console.log(isEmpty)
 
   return (
     <div>
@@ -96,7 +92,7 @@ export default function Home() {
       />
 
       <main className="my-8">
-        {isSearchLoading && (
+        {isLoading && (
           <div className="mt-16 flex justify-center">
             <Spinner />
           </div>
@@ -132,14 +128,18 @@ export default function Home() {
           </div>
         )}
 
-        {hasFoundUser && <UserCard user={user} />}
+        {!isLoading && (
+          <>
+            {hasFoundUser && <UserCard user={user} />}
 
-        {hasRepos && (
-          <div className="mt-6 grid grid-cols-2 gap-6">
-            {repos.map((repo) => (
-              <RepositoryCard key={repo.name} repo={repo} />
-            ))}
-          </div>
+            {hasRepos && (
+              <div className="mt-6 grid grid-cols-2 gap-6">
+                {repos.map((repo) => (
+                  <RepositoryCard key={repo.name} repo={repo} />
+                ))}
+              </div>
+            )}
+          </>
         )}
       </main>
     </div>

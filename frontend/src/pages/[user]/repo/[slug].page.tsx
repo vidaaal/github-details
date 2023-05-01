@@ -19,8 +19,6 @@ interface RepoDetailsProps {
 }
 
 export default function RepoDetails({ repo }: RepoDetailsProps) {
-  console.log(repo)
-
   return (
     <div>
       <Link
