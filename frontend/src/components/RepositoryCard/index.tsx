@@ -3,6 +3,7 @@ import { ArrowRight } from 'phosphor-react'
 import Link from 'next/link'
 
 import { formatDistanceToNow } from '@/utils/formatDistanceToNow'
+import { Button } from '../Button'
 
 interface RepositoryCardProps {
   repo: Repository
@@ -28,11 +29,14 @@ export function RepositoryCard({ repo }: RepositoryCardProps) {
       </div>
 
       <Link
-        className="flex gap-1 leading-none items-center self-end font-bold text-blue-500"
+        className="self-end"
         href={`${repo.owner.login}/repo/${repo.name}`}
+        passHref
       >
-        Ver mais
-        <ArrowRight weight="bold" />
+        <Button>
+          Ver mais
+          <ArrowRight weight="bold" />
+        </Button>
       </Link>
     </div>
   )

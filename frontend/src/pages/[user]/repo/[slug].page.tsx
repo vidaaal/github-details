@@ -13,6 +13,7 @@ import {
 } from 'phosphor-react'
 
 import { formatDistanceToNow } from '@/utils/formatDistanceToNow'
+import { Button } from '@/components/Button'
 
 interface RepoDetailsProps {
   repo: Repository
@@ -44,14 +45,11 @@ export default function RepoDetails({ repo }: RepoDetailsProps) {
             <InfoLabel icon={<Eye size={20} />} value={repo.watchers_count} />
           </div>
 
-          <a
-            href={repo.html_url}
-            className="flex items-center gap-1 text-blue-500"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <span className="text-sm font-bold leading-0">VER NO GITHUB</span>
-            <Share size={14} weight="bold" />
+          <a href={repo.html_url} target="_blank" rel="noreferrer">
+            <Button>
+              <span className="text-sm font-bold leading-0">VER NO GITHUB</span>
+              <Share size={14} weight="bold" />
+            </Button>
           </a>
         </header>
 

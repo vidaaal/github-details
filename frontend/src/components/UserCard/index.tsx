@@ -1,6 +1,7 @@
 import { User } from '@/types/User'
 import Image from 'next/image'
 import { Buildings, GithubLogo, Share, Users } from 'phosphor-react'
+import { Button } from '../Button'
 
 interface UserCardProps {
   user: User
@@ -19,12 +20,14 @@ export function UserCard({ user }: UserCardProps) {
 
       <a
         href={user.html_url}
-        className="flex items-center gap-1 absolute top-4 right-4 text-blue-500"
+        className="absolute top-4 right-4"
         target="_blank"
         rel="noreferrer"
       >
-        <span className="text-sm font-bold leading-0">GITHUB</span>
-        <Share size={14} weight="bold" />
+        <Button>
+          <span className="text-sm font-bold leading-0">GITHUB</span>
+          <Share size={14} weight="bold" />
+        </Button>
       </a>
 
       <div className="w-full flex flex-col justify-between gap-2">
