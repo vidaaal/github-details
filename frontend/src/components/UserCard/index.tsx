@@ -29,7 +29,7 @@ export function UserCard({ user }: UserCardProps) {
 
       <div className="w-full flex flex-col justify-between gap-2">
         <header className="flex items-center justify-between">
-          <h2 className="text-white">{user.name}</h2>
+          <h2 className="text-white">{user.name ?? 'Sem nome.'}</h2>
         </header>
 
         <p className="text-gray-400">{user.bio}</p>
