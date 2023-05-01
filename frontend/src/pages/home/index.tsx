@@ -83,7 +83,7 @@ export default function Home() {
   const isErrorOnScreen = hasError && !isLoading && searchTerm
 
   return (
-    <div>
+    <div className="px-4">
       <TextInput
         prefix="github.com/"
         placeholder="seu-usuario"
@@ -101,7 +101,7 @@ export default function Home() {
         {isEmpty && (
           <div className="mt-16 flex flex-col items-center justify-center">
             <h1 className="text-2xl mb-2 text-white">Bem-vindo!</h1>
-            <p className="text-gray-400">
+            <p className="text-gray-400 text-center">
               Digite o nome do usuário do Github para ver suas informações
               públicas.
             </p>
@@ -133,7 +133,7 @@ export default function Home() {
             {hasFoundUser && <UserCard user={user} />}
 
             {hasRepos && (
-              <div className="mt-6 grid grid-cols-2 gap-6">
+              <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2">
                 {repos.map((repo) => (
                   <RepositoryCard key={repo.name} repo={repo} />
                 ))}

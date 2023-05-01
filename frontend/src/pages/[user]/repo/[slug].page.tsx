@@ -20,7 +20,7 @@ interface RepoDetailsProps {
 
 export default function RepoDetails({ repo }: RepoDetailsProps) {
   return (
-    <div>
+    <div className="px-4">
       <Link
         href="/"
         className="w-fit flex gap-1 leading-none items-center self-end font-bold text-blue-500"
