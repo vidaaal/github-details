@@ -15,7 +15,7 @@ export default function Home() {
   const debouncedSearchTerm = useDebounce(searchTerm)
 
   const fetchGithubUserInfo = useCallback(async () => {
-    if (searchTerm) {
+    if (debouncedSearchTerm) {
       try {
         Promise.allSettled([
           usersService
@@ -49,7 +49,7 @@ export default function Home() {
         {repos.length > 0 && (
           <div className="mt-6 grid grid-cols-2 gap-6">
             {repos.map((repo) => (
-              <RepositoryCard key={repo.name} repository={repo} />
+              <RepositoryCard key={repo.name} repo={repo} />
             ))}
           </div>
         )}
